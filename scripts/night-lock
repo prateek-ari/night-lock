@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+command_name="${1:-status}"
+case "$command_name" in
+    status) method=GetStatus ;;
+    now) method=Now ;;
+    cancel) method=Cancel ;;
+    enable) method=Enable ;;
+    disable) method=Disable ;;
+    disable-tonight) method=DisableTonight ;;
+    *) echo 'Usage: night-lock {status|now|cancel|enable|disable|disable-tonight}' >&2; exit 2 ;;
+esac
+gdbus call --session --dest org.gnome.Shell.Extensions.NightLock \
+    --object-path /org/gnome/Shell/Extensions/NightLock \
+    --method "org.gnome.Shell.Extensions.NightLock.$method"

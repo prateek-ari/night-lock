@@ -1,0 +1,10 @@
+{
+  "uuid": "night-lock@local",
+  "name": "Night Lock",
+  "description": "Keep GNOME locked and displays powered off while overnight work continues.",
+  "shell-version": ["46"],
+  "settings-schema": "org.gnome.shell.extensions.night-lock",
+  "session-modes": ["user", "unlock-dialog"],
+  "url": "https://github.com/prateek-ari/night-lock",
+  "license": "GPL-3.0-or-later"
+}

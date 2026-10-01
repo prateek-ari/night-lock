@@ -1,0 +1,4 @@
+night-lock@local/schemas/gschemas.compiled
+research/
+node_modules/
+*.log
